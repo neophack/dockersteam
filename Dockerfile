@@ -125,10 +125,10 @@ RUN git clone https://github.com/utiasASRL/steam.git &&\
     cd build/steam &&\
     sudo make install &&   make clean
     
-ADD ["start.sh", "/app/"]
+#ADD ["start.sh", "/app/"]
 #clean up
 RUN rm -rf /var/lib/apt/lists/* &&\
-    chmod u+x /app/start.sh &&\
+    #chmod u+x /app/start.sh &&\
     mkdir /project &&\
     ldconfig &&\
     cp -s /usr/local/lib/libOpenThreads.so.21 /usr/lib
@@ -136,4 +136,4 @@ RUN rm -rf /var/lib/apt/lists/* &&\
 VOLUME ["/project"]
 
 WORKDIR /project/build
-ENTRYPOINT ["/app/start.sh"]
+#ENTRYPOINT ["/app/start.sh"]
