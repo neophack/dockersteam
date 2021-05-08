@@ -112,7 +112,7 @@ RUN git clone https://gitee.com/neophack/libpointmatcher && \
    cd libpointmatcher && mkdir build && cd build && cmake .. && make -j12 && make install &&   make clean
 
 #Installing steam:
-RUN git clone https://github.com/utiasASRL/steam.git &&\
+RUN git clone https://gitee.com/neophack/steam &&\
     cd steam && git submodule update --init --remote &&\
     mkdir -p build/catkin_optional && cd build/catkin_optional &&\
     cmake ../../steam/deps/catkin/catkin_optional && make -j12 &&\
