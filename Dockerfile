@@ -122,7 +122,7 @@ RUN git clone https://gitee.com/neophack/steam &&\
     cmake ../../steam/deps/catkin/lgmath && make -j12 &&\
     cd ../.. && mkdir -p build/steam && cd build/steam &&\
     cmake ../../steam && make -j12 &&\
-    sudo make install &&   make clean
+    make install &&   make clean
     
 #ADD ["start.sh", "/app/"]
 #clean up
